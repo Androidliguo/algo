@@ -1,9 +1,10 @@
-package queue;
+package java.queue09;
 
 /**
  * Created by wangzheng on 2018/10/9.
  */
-public class CircularQueue {
+// 用数组实现的队列
+public class ArrayQueue {
   // 数组：items，数组大小：n
   private String[] items;
   private int n = 0;
@@ -12,17 +13,17 @@ public class CircularQueue {
   private int tail = 0;
 
   // 申请一个大小为capacity的数组
-  public CircularQueue(int capacity) {
+  public ArrayQueue(int capacity) {
     items = new String[capacity];
     n = capacity;
   }
 
   // 入队
   public boolean enqueue(String item) {
-    // 队列满了
-    if ((tail + 1) % n == head) return false;
+    // 如果tail == n 表示队列已经满了
+    if (tail == n) return false;
     items[tail] = item;
-    tail = (tail + 1) % n;
+    ++tail;
     return true;
   }
 
@@ -30,14 +31,14 @@ public class CircularQueue {
   public String dequeue() {
     // 如果head == tail 表示队列为空
     if (head == tail) return null;
+    // 为了让其他语言的同学看的更加明确，把--操作放到单独一行来写了
     String ret = items[head];
-    head = (head + 1) % n;
+    ++head;
     return ret;
   }
 
   public void printAll() {
-    if (0 == n) return;
-    for (int i = head; i % n != tail; i = (i + 1) % n) {
+    for (int i = head; i < tail; ++i) {
       System.out.print(items[i] + " ");
     }
     System.out.println();

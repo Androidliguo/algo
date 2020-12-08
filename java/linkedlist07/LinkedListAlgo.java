@@ -1,4 +1,4 @@
-package linkedlist;
+package java.linkedlist07;
 
 /**
  * 1) 单链表反转
@@ -10,6 +10,10 @@ package linkedlist;
  * Author: Zheng
  */
 public class LinkedListAlgo {
+
+  public static void main(String[] args) {
+
+  }
 
   // 单链表反转
   public static Node reverse(Node list) {
@@ -80,14 +84,14 @@ public class LinkedListAlgo {
   	//-----------------------------------------
 
     // 有序链表合并 Leetcode 21 
-    /**
- 	* Definition for singly-linked list.
- 	* public class ListNode {
- 	*     int val;
- 	*     ListNode next;
- 	*     ListNode(int x) { val = x; }
- 	* }
-	*/
+
+ 	//Definition for singly-linked list.
+ 	 public class ListNode {
+ 	     int val;
+ 	     ListNode next;
+ 	    ListNode(int x) { val = x; }
+ 	 }
+
    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode soldier = new ListNode(0); //利用哨兵结点简化实现难度 技巧三
         ListNode p = soldier;

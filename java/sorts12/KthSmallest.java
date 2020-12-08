@@ -1,4 +1,4 @@
-package sort;
+package java.sorts12;
 
 /**
  * @author wangjunwei87

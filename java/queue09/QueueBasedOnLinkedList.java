@@ -1,5 +1,4 @@
-package queue;
-
+package java.queue09;
 /**
  * 基于链表实现的队列
  *

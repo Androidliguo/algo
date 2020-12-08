@@ -1,4 +1,4 @@
-package stack;
+package java.stack08;
 
 /**
  * 基于链表实现的栈。

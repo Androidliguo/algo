@@ -1,5 +1,4 @@
-package sorts;
-
+package java.sorts12;
 /**
  * Created by wangzheng on 2018/10/16.
  */
